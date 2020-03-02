@@ -12,6 +12,8 @@ public class Roadside
 		int q = read.nextInt();
 		int[][] dis = new int[n][n];
 		
+		//fill each position in the table with 'infinity'
+		//do not actually use Integer.MAX_VALUE, as this will cause overflow issues during addition
 		for(int i = 0; i<n; i++)
 		{
 			for(int j = 0; j<n; j++)

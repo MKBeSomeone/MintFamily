@@ -71,6 +71,7 @@ public class CSCat
 			major = m;
 			name = n;
 			
+			//formulas from problem statement
 			double assignmentGrade = 200.0*(studentProficiency)/assignmentDifficulty;
 			finalGrade = (assignmentGrade*percentGrade + currentAvg*(100 - percentGrade))/100.0;
 		}
@@ -78,6 +79,7 @@ public class CSCat
 		@Override
 		public int compareTo(Student o)
 		{
+			//major
 			if(!this.major.equals(o.major))
 			{
 				if(this.major.equals("CS"))
@@ -97,6 +99,8 @@ public class CSCat
 					return 1;
 				}
 			}
+
+			//department
 			if(!this.department.equals(o.department))
 			{
 				if(this.department.equals("CS"))
@@ -116,6 +120,8 @@ public class CSCat
 					return 1;
 				}
 			}
+
+			//final grade
 			if(this.finalGrade != o.finalGrade)
 			{
 				if(this.finalGrade < o.finalGrade)
@@ -124,6 +130,8 @@ public class CSCat
 				}
 				return 1;
 			}
+
+			//grade letter differential
 			if(this.gradeLetterDifferential() != o.gradeLetterDifferential())
 			{
 				if(this.gradeLetterDifferential() > o.gradeLetterDifferential())
@@ -132,6 +140,8 @@ public class CSCat
 				}
 				return 1;
 			}
+
+			//lexicographical ordering
 			return this.name.compareTo(o.name);
 		}
 		
@@ -159,6 +169,7 @@ public class CSCat
 			}
 		}
 
+		//how to compute the integer difference between two letter grades
 		public int gradeLetterDifferential()
 		{
 			double grade1 = finalGrade;
@@ -170,11 +181,13 @@ public class CSCat
 			return letter1.compareTo(letter2);
 		}
 		
+		//formula from problem statement
 		public double catGrade()
 		{
 			return percentGrade + currentAvg*(100 - percentGrade)/100.0;
 		}
 		
+		//performs 'help' from CS Cat
 		public void catHelp()
 		{
 			finalGrade = catGrade();

@@ -23,6 +23,8 @@ public class Pyramint
 			 *solution, beacuse this problem should not require use of the BigInteger class.
 			 *This method, however, runs in constant time, and is therefore optimal.
 			 *
+			 *Formula: f(n) = n*(n+1)*(2*n+1)/6
+			 *
 			 *BigInteger o1 = BigInteger.valueOf(n);
 			 *BigInteger o2 = o1.add(BigInteger.ONE); //n+1
 			 *BigInteger o3 = o1.shiftLeft(1).add(BigInteger.ONE); //2n+1
