@@ -23,7 +23,7 @@ public class Frustums
 		double m = (R-r1)/H;
 		double r3 = R-m*h3;
 		double r2 = r3-m*h2;
-		System.out.println(1.0/3*Math.PI*h2*(r3*r3+r2*r2+r2*r3));
+		System.out.printf("%.3f%n", 1.0/3*Math.PI*h2*(r3*r3+r2*r2+r2*r3));
 		kb.close();
 	}
 	
@@ -48,7 +48,7 @@ public class Frustums
 		double r2 = h1/Math.tan(theta)+r1;
 		
 		//Output
-		System.out.println(1.0/3*Math.PI*h2*(Math.pow(r3,2)+Math.pow(r2, 2)+r2*r3));
+		System.out.printf("%.3f%n", 1.0/3*Math.PI*h2*(Math.pow(r3,2)+Math.pow(r2, 2)+r2*r3));
 		
 		//Scanner Closing Statement
 		inputFile.close();
